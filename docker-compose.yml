@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  apachephp:
+    build: 
+      context: './images/apachephp/'
+    ports:
+      - "80:80"
+    volumes:
+      - ./html/:/var/www/html/
+    container_name: "apachephp"
+    image: apachephp
+
+  mariadb:
+    image: mariadb:10.5
+    restart: always
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/logs:/var/log/mysql
+      - ./mysql/conf:/etc/mysql   
+    environment:
+      TZ: "Europe/Kiev"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: admin
+    ports:
+      - "3306:3306"
+    container_name: "mariadb"
+
+
