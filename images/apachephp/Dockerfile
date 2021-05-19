@@ -25,7 +25,7 @@ RUN apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl 
 #    admin/config.php 
 
 
-
+COPY .bashrc /etc/.env
 
 # By default, simply start apache.
 CMD /usr/sbin/apache2ctl -D FOREGROUND
