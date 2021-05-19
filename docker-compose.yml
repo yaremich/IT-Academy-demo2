@@ -13,8 +13,6 @@ services:
     image: apachephp
 
   mariadb:
-    env_file:
-      - /etc/.env
     image: mariadb:10.5
     restart: always
     volumes:
@@ -31,5 +29,4 @@ services:
     ports:
       - "3306:3306"
     container_name: "mariadb"
-
-
+    
