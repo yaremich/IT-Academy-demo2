@@ -21,7 +21,7 @@ services:
       - ./mysql/conf:/etc/mysql   
     environment:
       TZ: "Europe/Kiev"
-      MYSQL_ALLOW_EMPTY_PASSWORD: '${}' #"no"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}" #root
       MYSQL_USER: "${MYSQL_USER}" #admin
       MYSQL_PASSWORD: "${MYSQL_PASSWORD}" #admin
