@@ -22,10 +22,10 @@ services:
     environment:
       TZ: "Europe/Kiev"
       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} #root
-      MYSQL_USER: ${MYSQL_USER} #admin
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD} #admin
-      MYSQL_DATABASE: ${MYSQL_DATABASE} #admin
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     ports:
       - "3306:3306"
     container_name: "mariadb"
