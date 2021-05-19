@@ -13,6 +13,8 @@ services:
     image: apachephp
 
   mariadb:
+    env_file:
+      - /etc/.env
     image: mariadb:10.5
     restart: always
     volumes:
