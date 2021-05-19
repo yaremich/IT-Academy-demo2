@@ -18,7 +18,8 @@ services:
     volumes:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/logs:/var/log/mysql
-      - ./mysql/conf:/etc/mysql   
+      - ./mysql/conf:/etc/mysql
+    env_file: .env
     environment:
       TZ: "Europe/Kiev"
       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
