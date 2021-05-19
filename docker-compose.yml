@@ -23,11 +23,6 @@ services:
      - /etc/.env
     environment:
       TZ: "Europe/Kiev"
-      #MYSQL_ALLOW_EMPTY_PASSWORD: "no"
-      #MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-      #MYSQL_USER: "${MYSQL_USER}"
-      #MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
-      #MYSQL_DATABASE: "${MYSQL_DATABASE}"
     ports:
       - "3306:3306"
     container_name: "mariadb"
