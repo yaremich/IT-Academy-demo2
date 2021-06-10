@@ -8,7 +8,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /mnt/opencart/:/var/www/html/
+      - /mnt/opencart/upload/:/var/www/html/
     container_name: "apachephp"
     image: apachephp
 
